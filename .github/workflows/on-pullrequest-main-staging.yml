@@ -7,11 +7,6 @@ on:
       - main
       - staging
 
-    # TODO: dynamically add the paths using the software-tool-automation
-    paths:
-      - 'packages/**'
-      - 'utils/**'
-
   workflow_dispatch: # Add this line to enable manual triggering
 
 # prevent concurrent runs of this workflow on the same branch
