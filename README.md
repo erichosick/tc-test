@@ -46,6 +46,8 @@
 ## Dependencies
 * [git](https://www.git-scm.com): version control system
 * [github](https://www.github.com): git repository hosting service
+* [workspace-release](https://github.com/sqlpm/products/workspace-release-cli): workspace/monorepo semantic versioning and changelogs
+* [conventional commits](https://www.conventionalcommits.org/): a specification for adding human and machine readable meaning to commit messages
 
 <!-- DEPENDENCIES_END -->
 
