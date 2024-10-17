@@ -5,7 +5,7 @@
 <!-- TITLE_END -->
 
 <!-- BADGES_START -->
-[![tool](https://img.shields.io/badge/github-blue?logo=typescript&label=tool)](https://github.com) [![langauge](https://img.shields.io/badge/javascript-blue?logo=javascript&label=langauge)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) [![pkg manager](https://img.shields.io/badge/pnpm-blue?logo=pnpm&label=pkg+manager)](https://pnpm.io) 
+[![tool](https://img.shields.io/badge/github-blue?logo=typescript&label=tool)](https://github.com) [![langauge](https://img.shields.io/badge/javascript-blue?logo=javascript&label=langauge)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) [![pkg manager](https://img.shields.io/badge/pnpm-blue?logo=pnpm&label=pkg+manager)](https://pnpm.io) [![workspaces](https://img.shields.io/badge/pnpm-blue?logo=pnpm&label=workspaces)](https://pnpm.io/workspaces) 
 <!-- BADGES_END -->
 
 <!-- DESCRIPTION_START -->
@@ -63,6 +63,7 @@ cd tc-test && pnpm install
 * [workspace-release](https://github.com/sqlpm/products/workspace-release-cli): workspace/monorepo semantic versioning and changelogs
 * [conventional commits](https://www.conventionalcommits.org/): a specification for adding human and machine readable meaning to commit messages
 * [pnpm](https://pnpm.io): effecient package manager for node.js
+* [pnpm workspace](https://pnpm.io/workspaces): support workspaces and mono-repos
 
 <!-- DEPENDENCIES_END -->
 
@@ -90,3 +91,13 @@ cd tc-test && pnpm install
 
 <!-- ADDITIONAL_NOTES_END -->
 
+
+<!-- WORKSPACES_START -->
+
+## Workspaces
+
+* [packages](packages/README.md): packges released in npmjs.com
+* [products](products/README.md): applications, services and websites
+
+
+<!-- WORKSPACES_END -->
