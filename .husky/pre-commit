@@ -1,0 +1,4 @@
+#run tests on changed files
+pnpm test:changed
+pnpm lint
+pnpm prettier:check
