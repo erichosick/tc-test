@@ -2,9 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
-## [tc-test@0.1.0](https://github.com/erichosick/tc-test/compare/...v0.1.0) (2024-10-17)
+## [tc-test@0.2.0](https://github.com/erichosick/tc-test/compare/...v0.2.0) (2024-10-18)
 
 ### Features
+* **add:** add two numbers together ([d42359a](https://github.com/erichosick/tc-test/commit/d42359a6961f1445de0a72ef71da24aa0ee6a8c7))
 * **setup:** setup auto bump of versions, changelogs and publishing ([d774956](https://github.com/erichosick/tc-test/commit/d774956897b09f350b79460bf88ed9ac52848c35))
 * **setup:** verify pull request ([49717ed](https://github.com/erichosick/tc-test/commit/49717ed8cd389ac801ec69d7fbb04398f678dd83))
 * **setup:** husky ([c615375](https://github.com/erichosick/tc-test/commit/c6153759263e20899c7e0c413ddc1bae23878bae))
@@ -21,3 +22,6 @@ All notable changes to this project will be documented in this file.
 * **setup:** node package.json ([4043850](https://github.com/erichosick/tc-test/commit/4043850eca8e4aa6ddc7b3c440475da87a7276a0))
 * **setup:** setup .gitignore file ([91c5b23](https://github.com/erichosick/tc-test/commit/91c5b2317ad25c97a1ed5df66eb2ed9059c2d123))
 * **setup:** setup readme.md file ([e9d481b](https://github.com/erichosick/tc-test/commit/e9d481b01de97d718844542fa5bd508bebf4484d))
+
+### Chore
+* **release:** tc-test@0.1.0 ([6c418b9](https://github.com/erichosick/tc-test/commit/6c418b931c023095283aeac97bde5bc366fa19bd))
