@@ -1,0 +1,4 @@
+# see https://pnpm.io/workspaces#referencing-workspace-packages-through-their-relative-path}
+packages:
+  - packages/*
+  - products/*
