@@ -1,0 +1,38 @@
+{
+  "name": "tc-test",
+  "version": "0.0.0",
+  "license": "GPL-3.0-or-later",
+  "private": true,
+  "description": "**sqlpm-workspace**: A pnpm workspace that contains all of our packages and products.",
+  "keywords": [
+    "typescript",
+    "node",
+    "workspace",
+    "javascript",
+    "sql",
+    "sqlpm",
+    "sql migration",
+    "migration tools",
+    "version control"
+  ],
+  "homepage": "https://github.com/erichosick/tc-test",
+  "bugs": {
+    "url": "https://github.com/erichosick/tc-test/issues",
+    "email": "erichosick@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erichosick/tc-test"
+  },
+  "author": {
+    "name": "Eric Hosick",
+    "email": "erichosick@gmail.com",
+    "url": "https://github.com/erichosick"
+  },
+  "contributors": [],
+  "packageManager": "pnpm@^9.7.1",
+  "engines": {
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+  },
+  "scripts": {}
+}
