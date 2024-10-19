@@ -5,7 +5,7 @@
 <!-- TITLE_END -->
 
 <!-- BADGES_START -->
-[![tool](https://img.shields.io/badge/github-blue?logo=typescript&label=tool)](https://github.com) [![langauge](https://img.shields.io/badge/javascript-blue?logo=javascript&label=langauge)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) 
+[![tool](https://img.shields.io/badge/github-blue?logo=typescript&label=tool)](https://github.com) [![langauge](https://img.shields.io/badge/javascript-blue?logo=javascript&label=langauge)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) [![pkg manager](https://img.shields.io/badge/pnpm-blue?logo=pnpm&label=pkg+manager)](https://pnpm.io) 
 <!-- BADGES_END -->
 
 <!-- DESCRIPTION_START -->
@@ -19,6 +19,20 @@
 <!-- DETAILS_END -->
 
 <!-- QUICK_SETUP_START -->
+
+# Quick Start
+
+Using a terminal, clone and install the project:
+
+```bash
+# clone the project
+git clone https://github.com/erichosick/tc-test.git
+
+# install all dependencies
+cd tc-test && pnpm install
+```
+
+
 
 <!-- QUICK_SETUP_END -->
 
@@ -48,6 +62,7 @@
 * [github](https://www.github.com): git repository hosting service
 * [workspace-release](https://github.com/sqlpm/products/workspace-release-cli): workspace/monorepo semantic versioning and changelogs
 * [conventional commits](https://www.conventionalcommits.org/): a specification for adding human and machine readable meaning to commit messages
+* [pnpm](https://pnpm.io): effecient package manager for node.js
 
 <!-- DEPENDENCIES_END -->
 

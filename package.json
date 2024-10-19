@@ -32,13 +32,16 @@
   "contributors": [],
   "packageManager": "pnpm@^9.7.1",
   "engines": {
-    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0",
+    "npm": "Use pnpm instead of npm."
   },
   "scripts": {
     "ci:release": "pnpm run --stream --recursive ci:release && pnpm workspace-release release",
-    "ci:publish": "pnpm run --stream --recursive ci:publish"
+    "ci:publish": "pnpm run --stream --recursive ci:publish",
+    "preinstall": "pnpm exec only-allow pnpm"
   },
   "devDependencies": {
-    "@ekhtest/workspace-release-cli": "^0.4.0"
+    "@ekhtest/workspace-release-cli": "^0.4.0",
+    "only-allow": "^1.2.1"
   }
 }
