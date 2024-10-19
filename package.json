@@ -38,7 +38,8 @@
   "scripts": {
     "ci:release": "pnpm run --stream --recursive ci:release && pnpm workspace-release release",
     "ci:publish": "pnpm run --stream --recursive ci:publish",
-    "preinstall": "pnpm exec only-allow pnpm"
+    "preinstall": "pnpm exec only-allow pnpm",
+    "publish": "echo 'Publishing is not allowed on the workspace. Run ci:publish instead.'"
   },
   "devDependencies": {
     "@ekhtest/workspace-release-cli": "^0.4.0",
