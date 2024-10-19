@@ -43,6 +43,11 @@
   },
   "devDependencies": {
     "@ekhtest/workspace-release-cli": "^0.4.0",
-    "only-allow": "^1.2.1"
+    "@types/node": "^22.7.7",
+    "only-allow": "^1.2.1",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.8.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3"
   }
 }
