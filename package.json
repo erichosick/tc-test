@@ -54,7 +54,8 @@
     "test:debug": "jest --watch --config jest.config.ts",
     "test:changed": "JEST_COVERAGE=false NODE_ENV=test jest --onlyChanged --config jest.config.ts",
     "ci:test:changed": "git diff --name-only --diff-filter=ACM ae5d2a856492b23eee364c61ed7cb899322ca806 HEAD | xargs pnpm exec jest --findRelatedTests --config jest.config.ts",
-    "commitlint": "pnpm exec commitlint --config=.config/commitlint.config.mjs --strict --verbose"
+    "commitlint": "pnpm exec commitlint --config=.config/commitlint.config.mjs --strict --verbose",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
@@ -70,6 +71,7 @@
     "eslint-plugin-jest": "^28.8.3",
     "eslint-plugin-react": "^7.37.1",
     "globals": "^15.11.0",
+    "husky": "^9.1.6",
     "jest": "^29.7.0",
     "jest-expect-message": "^1.1.3",
     "nodemon": "^3.1.7",
