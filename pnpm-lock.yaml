@@ -1,0 +1,30 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+devDependencies:
+  '@ekhtest/workspace-release-cli':
+    specifier: ^0.4.0
+    version: 0.4.0
+
+packages:
+
+  /@ekhtest/workspace-release-cli@0.4.0:
+    resolution: {integrity: sha512-YcP3r82i+p9WIb+Ia+7b23S6/lfozGEsjJSRgNdiXW0uJ8zteaBD6KOxzbSLjZASPlGv/33jBR1yOoaT6W3mEQ==}
+    hasBin: true
+    dependencies:
+      commander: 12.1.0
+      uuidv7: 1.0.2
+    dev: true
+
+  /commander@12.1.0:
+    resolution: {integrity: sha512-Vw8qHK3bZM9y/P10u3Vib8o/DdkvA2OtPtZvD871QKjy74Wj1WSKFILMPRPSdUSx5RFK1arlJzEtA4PkFgnbuA==}
+    engines: {node: '>=18'}
+    dev: true
+
+  /uuidv7@1.0.2:
+    resolution: {integrity: sha512-8JQkH4ooXnm1JCIhqTMbtmdnYEn6oKukBxHn1Ic9878jMkL7daTI7anTExfY18VRCX7tcdn5quzvCb6EWrR8PA==}
+    hasBin: true
+    dev: true

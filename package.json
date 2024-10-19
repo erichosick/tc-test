@@ -34,5 +34,11 @@
   "engines": {
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
   },
-  "scripts": {}
+  "scripts": {
+    "ci:release": "pnpm run --stream --recursive ci:release && pnpm workspace-release release",
+    "ci:publish": "pnpm run --stream --recursive ci:publish"
+  },
+  "devDependencies": {
+    "@ekhtest/workspace-release-cli": "^0.4.0"
+  }
 }
