@@ -1,0 +1,50 @@
+{
+  "name": "@ekhtest/add",
+  "version": "0.1.1",
+  "license": "GPL-3.0-or-later",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "Add two numbers together.",
+  "keywords": [
+    "math",
+    "add"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
+  },
+  "type": "module",
+  "module": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "ci:release": "npx workspace-release release",
+    "ci:publish": "npx workspace-release publish",
+    "build": "npx tsc",
+    "build:watch": "npx tsc --watch"
+  },
+  "author": {
+    "name": "Eric Hosick",
+    "email": "erichosick@gmail.com",
+    "url": "https://github.com/erichosick"
+  },
+  "bugs": {
+    "type": "git",
+    "url": "https://github.com/erichosick/sqlpm-workspace/issues"
+  },
+  "homepage": "https://github.com/erichosick/sqlpm-workspace/tree/main/packages/flexible-type",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erichosick/sqlpm-workspace"
+  },
+  "nx": {
+    "includedScripts": [
+      "build"
+    ]
+  }
+}
