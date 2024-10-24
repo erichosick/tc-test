@@ -1,0 +1,80 @@
+name: On push/merge into main - bump versions, update CHANGELOG.md and publish packages
+
+on:
+  push:
+    branches:
+      - main
+
+    # TODO: dynamically add the paths using the software-tool-automation
+    paths:
+      - 'packages/**'
+
+  # enable manual triggering
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      # enable write access to the repository
+      contents: write
+    steps:
+      - name: Check for package registry environment variable
+        run: |
+          if [ -z "${{ secrets.PACKAGE_REGISTRY_ACCESS_TOKEN }}" ]; then
+            echo "Error: PACKAGE_REGISTRY_ACCESS_TOKEN is not set."
+            exit 1
+          fi
+
+      # the npmjs.com access token must be a classic automation token or
+      # the command will be prompted for a one time password
+      - name: Setup .npmrc file so we can publish to registry.npmjs.org
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${PACKAGE_REGISTRY_ACCESS_TOKEN}" > ~/.npmrc
+        env:
+          PACKAGE_REGISTRY_ACCESS_TOKEN: ${{ secrets.PACKAGE_REGISTRY_ACCESS_TOKEN }}
+
+      - name: Checkout repository from github
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          ref: main
+          fetch-depth: 0 # we need to fetch all changes which are required for workspace-release to work
+          fetch-tags: true # we need to fetch all the tags because these are also required for workspace-release to work
+
+      - name: Fetch the staging and config git
+        run: |
+          git fetch origin staging:staging
+          git config --local user.name "${{ github.actor }}"
+          git config --local user.email "${{ github.actor }}@users.noreply.github.com"
+
+      - name: Install package manager pnpm
+        # see https://github.com/pnpm/action-setup
+        uses: pnpm/action-setup@v4
+        with:
+          # version is pulled from packageManager property in package.json
+          # version: ...
+
+          # we will be caching node and then install dependencies
+          run_install: false
+
+      - name: Install Node.js
+        # see https://github.com/actions/setup-node
+        # see https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md
+        uses: actions/setup-node@v4
+        with:
+          # node version will come from the package.json file
+          # node-version: ...
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run Workspace-release release. For all changed packages, bumping their version, updating their CHANGELOG.md and commiting back to the repository
+        run: |
+          pnpm ci:release
+
+      - name: Run Workspace-release publish. For all changed packages, publishing them to the registry.npmjs.org
+        run: |
+          pnpm ci:publish
