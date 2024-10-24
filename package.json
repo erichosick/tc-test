@@ -53,9 +53,12 @@
     "test:watch": "JEST_COVERAGE=false NODE_ENV=test jest --watch --config jest.config.ts",
     "test:debug": "jest --watch --config jest.config.ts",
     "test:changed": "JEST_COVERAGE=false NODE_ENV=test jest --onlyChanged --config jest.config.ts",
-    "ci:test:changed": "git diff --name-only --diff-filter=ACM 99bda101b9918bde94591210a46f02e2d48c21ca HEAD | xargs pnpm exec jest --findRelatedTests --config jest.config.ts"
+    "ci:test:changed": "git diff --name-only --diff-filter=ACM 99bda101b9918bde94591210a46f02e2d48c21ca HEAD | xargs pnpm exec jest --findRelatedTests --config jest.config.ts",
+    "commitlint": "pnpm exec commitlint --config=.config/commitlint.config.mjs --strict --verbose"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
     "@ekhtest/workspace-release-cli": "^0.4.0",
     "@eslint/js": "^9.13.0",
     "@jest/globals": "^29.7.0",
